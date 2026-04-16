@@ -37,27 +37,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Project structure
 
+This project follows a feature-based architecture with a clear separation of concerns:
+
+Features → self-contained modules (e.g. auth)
+Shared → reusable UI components
+Services → API communication layer
+App → application setup (routing, providers)
+
 src/
 ├── app/ # App setup (routing, providers)
-│ └── App.tsx
 │
 ├── features/
-│ └── auth/ # Authentication feature
-│ ├── components/ # Feature-specific UI
-│ │ └── LoginForm.tsx
-│ ├── hooks/ # Business logic
-│ │ └── useAuth.ts
-│ ├── api/ # API calls
-│ │ └── authApi.ts
-│ └── types.ts # Type definitions
 │
 ├── shared/
 │ ├── ui/ # Reusable UI components
-│ │ ├── Button.tsx
-│ │ └── Input.tsx
 │ └── hooks/ # Shared hooks
 │
 ├── services/
-│ └── apiClient.ts # Axios / fetch setup
 │
 ├── index.tsx
