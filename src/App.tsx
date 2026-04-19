@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './features/auth/components/Login.js';
+import Login from './features/auth/components/Login';
 
 
 function App() {
