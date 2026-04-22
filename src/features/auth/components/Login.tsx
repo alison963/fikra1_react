@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 
+
+// Login Formulat und aufruf der login Funktion aus useAuth
+
 const Login = () => {
   // state für identifier und password
   const [identifier, setIdentifier] = useState(""); 
   const [password, setPassword] = useState("");
 
-  
+
+
   const { login, loading, error } = useAuth();
 
   const handleSubmit = (e: React.FormEvent) => {

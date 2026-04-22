@@ -9,7 +9,6 @@ export const login = async (identifier: string, password: string) => {
       body: JSON.stringify({ identifier, password }),
     
   });
-    console.log("Request body:", JSON.stringify({ identifier, password }));
     console.log("Request URL:", `${BASE_URL}/api/auth/login`);
   if (!response.ok) {
     throw new Error("Login failed");
@@ -17,3 +16,18 @@ export const login = async (identifier: string, password: string) => {
 
   return response.json(); // vermutlich JWT
 };
+
+export const getUserInfo = async () => {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(`${BASE_URL}/api/auth/userinfo`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  
+  if (!response.ok) {
+    throw new Error("Failed to fetch user info");
+  }
+  return response.json();
+}
