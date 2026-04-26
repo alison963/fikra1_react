@@ -1,6 +1,5 @@
 
 import { useAuthContext } from '../../features/auth/context/AuthContext';
-import { useBookmark } from '../../features/bookmark/hooks/useBookmark';
 import CarCard from '../../features/cars/components/CarCard';
 import { useNavigate } from "react-router-dom";
 

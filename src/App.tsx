@@ -5,10 +5,6 @@ import { useAuthContext } from './features/auth/context/AuthContext';
 import HomeScreen from './shared/ui/HomeScreen';
 import BookmarkCard from "./features/bookmark/components/BookmarkCard";
 
-
-
-
-
 function App() {
 
   const { isAuthenticated } = useAuthContext();
